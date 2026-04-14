@@ -1,9 +1,15 @@
 # ColabMediaSuite 🚀
-
 [![PyPI version](https://img.shields.io/badge/pypi-v1.0.0-blue.svg)](https://pypi.org/project/ColabMediaSuite/)
-[![Python versions](https://img.shields.io/pypi/pyversions/NexusViewPro.svg)](https://pypi.org/project/ColabMediaSuite/)
-[![License](https://img.shields.io/pypi/l/NexusViewPro.svg)](https://github.com/entbappy/NexusViewPro/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/version-0.0-blue.svg)](https://pypi.org/project/ColabMediaSuite/)
+[![License](https://img.shields.io/github/license/ThauhidMahmud/ColabMediaSuite.svg)](https://github.com/ThauhidMahmud/ColabMediaSuite/blob/main/LICENSE)
 
+---
+
+## 🚀 ColabMediaSuite
+
+**ColabMediaSuite** is a lightweight Python library designed for Data Scientists and Jupyter Notebook users. It allows you to seamlessly render live websites and embed YouTube videos directly within your `.ipynb` environment (Jupyter Notebook, JupyterLab, Google Colab).
+
+👉 No more switching tabs—view everything right next to your code.
 **ColabMediaSuite** is a lightweight Python library designed for Data Scientists and Jupyter Notebook users. It allows you to seamlessly render live websites and embed YouTube videos directly within your `.ipynb` environment (Jupyter Notebook, JupyterLab, Google Colab).
 
 Stop switching tabs to read documentation or watch tutorials—view them right next to your code!

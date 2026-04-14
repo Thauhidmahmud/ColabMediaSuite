@@ -21,7 +21,7 @@ Stop switching tabs to read documentation or watch tutorials—view them right n
 
 ## 📦 Installation
 
-You can install NexusViewPro via pip:
+You can install ColabMediaSuite via pip:
 
 ```bash
 pip install ColabMediaSuite

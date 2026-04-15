@@ -2,30 +2,38 @@
 import setuptools
 
 
+# with open("README.md", "r", encoding="utf-8") as f:
+#     long_description = f.read()
+
+
+
+# __version__ = "0.0.1"
+
+# REPO_NAME = "ColabMediaSuite" 
+# AUTHOR_USER_NAME = "Thauhid Mahmud"
+# AUTHOR_EMAIL = "thauhidmahmud2000@gmail.com"
+# SRC_REPO = "ColabMediaSuite" 
+
+
+
+
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
-
-
-__version__ = "0.0.1"
-
-REPO_NAME = "ColabMediaSuite" 
-AUTHOR_USER_NAME = "Thauhid Mahmud"
-AUTHOR_EMAIL = "thauhidmahmud2000@gmail.com"
-SRC_REPO = "ColabMediaSuite" 
-
 setuptools.setup(
-    name=SRC_REPO,
-    version=__version__,
-    author=AUTHOR_USER_NAME,
-    author_email=AUTHOR_EMAIL,
-    description="A small python package",
+    name="ColabMediaSuite",
+    version="0.0.1",
+    author="Thauhid Mahmud",
+    author_email="your.email@example.com",
+    description="A small package for rendering media in Colab/Jupyter",
     long_description=long_description,
-    long_description_content="text/markdown",
-    url=f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}",
-    project_urls={
-        "Bug Tracker": f"https://github.com/{AUTHOR_USER_NAME}/{REPO_NAME}/issues",
-    },
-    package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src")
+    long_description_content_type="text/markdown", # এই লাইনটি খুব গুরুত্বপূর্ণ
+    url="https://github.com/ThauhidMahmud/ColabMediaSuite",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
 )

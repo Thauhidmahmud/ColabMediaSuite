@@ -88,10 +88,14 @@ jobs:
 
     steps:
       - name: Trigger Render Deploy
-        # এখানে "" ব্যবহার করা হয়েছে যাতে URL টি সঠিকভাবে কাজ করে
         run: |
+          # Secret চেক করা হচ্ছে
           if [ -z "${{ secrets.RENDER_DEPLOY_HOOK }}" ]; then
-            echo "Error: RENDER_DEPLOY_HOOK is missing in GitHub Secrets!"
+            echo "::error::RENDER_DEPLOY_HOOK is missing in GitHub Secrets!"
             exit 1
           fi
-          curl -f -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
+          
+          # curl কমান্ড (Exit code 6 সমাধান করার জন্য কোটেশন নিশ্চিত করা হয়েছে)
+          curl -f -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}" \
+            -H "Content-Length: 0" \
+            -v

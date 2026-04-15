@@ -1,51 +1,4 @@
 
-# name: Python application
-
-# on:
-#   push:
-#     branches: ["main"]
-#   pull_request:
-#     branches: ["main"]
-
-# permissions:
-#   contents: read
-
-# jobs:
-#   build:
-#     runs-on: ${{ matrix.os }}
-#     strategy:
-#       matrix:
-#         os: [ubuntu-latest, windows-latest]
-#         python-version: ["3.8", "3.9"]
-
-#     steps:
-#       - uses: actions/checkout@v3
-
-#       - name: Set up Python ${{ matrix.python-version }}
-#         uses: actions/setup-python@v3
-#         with:
-#           python-version: ${{ matrix.python-version }}
-
-#       - name: Install dependencies
-#         run: |
-#           python -m pip install --upgrade pip
-#           pip install flake8 pytest tox tox-gh-actions
-#           pip install -r requirements.txt
-
-#       - name: Test with tox
-#         run: tox
-
-#   deploy:
-#     needs: build
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Trigger Render Deploy
-#         run: |
-#           curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
-
-
-
 name: Python application
 
 on:
@@ -82,20 +35,5 @@ jobs:
       - name: Test with tox
         run: tox
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
 
-    steps:
-      - name: Trigger Render Deploy
-        run: |
-          # Secret চেক করা হচ্ছে
-          if [ -z "${{ secrets.RENDER_DEPLOY_HOOK }}" ]; then
-            echo "::error::RENDER_DEPLOY_HOOK is missing in GitHub Secrets!"
-            exit 1
-          fi
-          
-          # curl কমান্ড (Exit code 6 সমাধান করার জন্য কোটেশন নিশ্চিত করা হয়েছে)
-          curl -f -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}" \
-            -H "Content-Length: 0" \
-            -v
+

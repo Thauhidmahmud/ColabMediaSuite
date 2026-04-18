@@ -23,7 +23,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 
 setuptools.setup(
     name="ColabMediaSuite",
-    version="0.0.1",
+    version="0.0.2",
     author="Thauhid Mahmud",
     author_email="thauhidmahmud2000@gmail.com",
     description="A small package for rendering media in Colab/Jupyter",

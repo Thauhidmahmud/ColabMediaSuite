@@ -16,29 +16,22 @@ import setuptools
 
 
 
-
 import setuptools
 
-# README ফাইল থেকে লং ডেসক্রিপশন পড়া হচ্ছে
 with open("README.md", "r", encoding="utf-8") as f:
     long_description = f.read()
 
-# আপনার প্যাকেজের ভার্সন এবং অন্যান্য তথ্য
-__version__ = "0.0.1"
-REPO_NAME = "ColabMediaSuite"
-SRC_REPO = "ColabMediaSuite"
-
 setuptools.setup(
-    name=SRC_REPO,
-    version=__version__,
+    name="ColabMediaSuite",
+    version="0.0.1",
     author="Thauhid Mahmud",
     author_email="thauhidmahmud2000@gmail.com",
-    description="A small python package for rendering media in Colab/Jupyter",
+    description="A small package for rendering media in Colab/Jupyter",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url=f"https://github.com/ThauhidMahmud/{REPO_NAME}",
+    url="https://github.com/ThauhidMahmud/ColabMediaSuite",
     package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"),
+    packages=setuptools.find_packages(where="src"), # এটি আপনার ফাইল স্ট্রাকচারের সাথে মিল রেখে ঠিক করা হয়েছে
     install_requires=[
         "ensure==1.0.2",
         "py-youtube==1.1.7"

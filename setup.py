@@ -31,7 +31,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/ThauhidMahmud/ColabMediaSuite",
     package_dir={"": "src"},
-    packages=setuptools.find_packages(where="src"), # এটি আপনার ফাইল স্ট্রাকচারের সাথে মিল রেখে ঠিক করা হয়েছে
+    packages=setuptools.find_packages(where="src"),
     install_requires=[
         "ensure==1.0.2",
         "py-youtube==1.1.7"

@@ -29,6 +29,7 @@ You can install ColabMediaSuite via pip:
 ```bash
 pip install ColabMediaSuite
 
+
 from ColabMediaSuite.youtube import render_youtube_video
 
 render_youtube_video("[https://www.youtube.com/watch?v=h25pePMdoPA](https://www.youtube.com/watch?v=h25pePMdoPA)")
